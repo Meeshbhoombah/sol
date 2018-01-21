@@ -8,12 +8,12 @@ node's to find other nodes in order to test a distributed network.
 - Find nearest node
 
 ## To-do
-[ ] Create Flask server
-[ ] Allow a new node to be registered
+- [ ] Create Flask server
+- [ ] Allow a new node to be registered
     - Args = node url, node location
     - Return = a generated node address
     - Save the node url, address, and location to a CSV
-[ ] Find the nearest node given the location of a node
+- [ ] Find the nearest node given the location of a node
     - Args = node location
     - Return nearest node address
 
