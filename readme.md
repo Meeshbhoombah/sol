@@ -1,6 +1,12 @@
 # Solidity
 Teaching myself solidity through free online resources.
 
+## Tutorials
+- [ ] [CryptoDoggies](https://www.bitdegree.org/courses/learn-solidity-space-doggos/lesson/1/intro)
+- [ ] [CryptoZombies](https://cryptozombies.io/)
+- [ ] [Ethernaut](https://ethernaut.zeppelin.solutions/)
+- [ ] [Truffle Pet Shop](http://truffleframework.com/tutorials/pet-shop)
+
 ## Resources
 - [ ] [Ethereum Wiki](https://github.com/ethereum/wiki/wiki/Ethereum-introduction#development)
 - [ ] [Basics of Solidity - Ethereum Dev](https://ethereumdev.io/)
