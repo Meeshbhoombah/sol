@@ -17,5 +17,5 @@ Teaching myself solidity through free online resources.
 
 ## State Channels
 - [Counterfactual: Generalized State Channels - L4](https://www.counterfactual.com/statechannels/)
-- [Spank-chain `generalized-state-channels`](https://github.com/SpankChain/general-state-channels)
+- [`generalized-state-channels` - SpankChain](https://github.com/SpankChain/general-state-channels)
 
