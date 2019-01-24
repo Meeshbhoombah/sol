@@ -15,3 +15,7 @@ Teaching myself solidity through free online resources.
 - [Full Stack Project](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
 - [Learn X in Y](https://learnxinyminutes.com/docs/solidity/)
 
+## State Channels
+- [Counterfactual: Generalized State Channels - L4](https://www.counterfactual.com/statechannels/)
+- [Spank-chain `generalized-state-channels`](https://github.com/SpankChain/general-state-channels)
+
