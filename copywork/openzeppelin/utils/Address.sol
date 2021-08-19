@@ -19,15 +19,20 @@ library Address {
 
     Replaces Solidity's `transfer`: sends `amount` wei to `recipient`
     - Forwards **ALL** available gas, reverts on error
-    
-    Take care to not use this in functions with reentracy vulns
-    - Use {ReentrancyGuaurd}
-    */
+    - Deals w/ EIP 1884:
+        + Increases gas cost of certain opcodes
+            * Potentially makes contract exceed 2300 gas limit for `transfer`
+        + sendValue provides an alternative
+
+        Take care to not use this in functions with reentracy vulns
+        - Use {ReentrancyGuaurd}
+     */
     function sendValue(address payable recipient, unint256 amount) internal {
         require(address(this).balance >= amount, "Address: insufficient balance");
         // creates a function call message that encodes function/parameters,
         // first paratemeter is required
         (bool success, ) = recipient.call{value: amount}("");
+        require(success, "Address: unable to send value, recipient may have reverted");
     }
 
 }
