@@ -1,6 +1,6 @@
-// SPDX=License-Identifier: MIT
+// SPDX=License-Identifier: UNLICENSED
 
-pragma soldiity ^0.8.0;
+pragma solidity ^0.8.0;
 
 library Address {
     function isContract(address account) internal view returns (bool) {
@@ -27,7 +27,7 @@ library Address {
         Take care to not use this in functions with reentracy vulns
         - Use {ReentrancyGuaurd}
      */
-    function sendValue(address payable recipient, unint256 amount) internal {
+    function sendValue(address payable recipient, uint256 amount) internal {
         require(address(this).balance >= amount, "Address: insufficient balance");
         // creates a function call message that encodes function/parameters,
         // first paratemeter is required
