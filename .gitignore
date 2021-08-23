@@ -7,8 +7,6 @@ temp/
 # MacOs
 .DS_Store
 
-# IntelliJ project files
-.idea
-*.iml
-out
-gen
+# Node
+node_modules
+

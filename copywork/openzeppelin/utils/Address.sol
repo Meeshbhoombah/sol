@@ -6,12 +6,12 @@ library Address {
     function isContract(address account) internal view returns (bool) {
         uint256 size;
 
-       assembly {
-            size := exitcodesize(account) 
-       } 
+        assembly {
+            size := extcodesize(account) 
+        } 
 
-       // True if an `account` is a contract 
-       return size > 0; 
+        // The size of the
+        return size > 0; 
     }
 
     /* 
