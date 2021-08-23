@@ -3,30 +3,32 @@
 pragma solidity ^0.8.0;
 
 library Address {
+    /**
+    Within the EVM, addresses for externally owned account === smart contract
+
+    A design goal of Ethereum is be impartial in treatment to accounts. As a 
+    result, there exists no function to determine if a particular address is 
+    a contract. This function returns true if, and only if there exists a 
+    constructed contract at the given account address.
+    */
     function isContract(address account) internal view returns (bool) {
         uint256 size;
 
         assembly {
+            // `extcodesize` is the Opcode for the length of the account's 
+            // contract bytecode
             size := extcodesize(account) 
         } 
 
-        // The size of the
+        // During construction, the contract bytecode is initalized with 0,
+        // after which, it is filled in with the length, which is greater than
+        // 0 by default, thus returning true for all constructed contracts
         return size > 0; 
     }
 
-    /* 
-    What does it mean for a contract to not adhere to the ABI?
-
-    Replaces Solidity's `transfer`: sends `amount` wei to `recipient`
-    - Forwards **ALL** available gas, reverts on error
-    - Deals w/ EIP 1884:
-        + Increases gas cost of certain opcodes
-            * Potentially makes contract exceed 2300 gas limit for `transfer`
-        + sendValue provides an alternative
-
-        Take care to not use this in functions with reentracy vulns
-        - Use {ReentrancyGuaurd}
-     */
+    /**
+    Solidity's default transfer forwards a fixed amount of gas 
+    */
     function sendValue(address payable recipient, uint256 amount) internal {
         require(address(this).balance >= amount, "Address: insufficient balance");
         // creates a function call message that encodes function/parameters,
