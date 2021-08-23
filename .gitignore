@@ -10,3 +10,6 @@ temp/
 # Node
 node_modules
 
+# Solidity
+cache
+
